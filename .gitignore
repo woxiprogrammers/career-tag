@@ -3,3 +3,6 @@
 .env.php
 .env
 /vendor
+.idea/
+/node_modules
+Homestead.yaml
