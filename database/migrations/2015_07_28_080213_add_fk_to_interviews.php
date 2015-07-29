@@ -22,7 +22,7 @@ class AddFkToInterviews extends Migration
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
             $table->foreign('reminder_id')
-                ->references('id')->on('users')
+                ->references('id')->on('reminders')
                 ->onDelete('cascade')
                 ->onUpdate('cascade');
         });
