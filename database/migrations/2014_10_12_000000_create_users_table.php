@@ -15,7 +15,8 @@ class CreateUsersTable extends Migration
         Schema::create('users', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->bigIncrements('id');
-            $table->string('name',255);
+            $table->string('fullname',255);
+            $table->string('username',255)->unique();
             $table->string('email')->unique();
             $table->string('password', 255);
             $table->string('contact_no', 255)->nullable();
@@ -24,9 +25,8 @@ class CreateUsersTable extends Migration
             $table->string('profile_image', 255)->nullable();
             $table->string('profile_video', 255)->nullable();
             $table->string('company_registration_no', 255)->nullable();
-            $table->integer('role_id');
-            $table->bigInteger('city_id')->nullable();
-            $table->bigInteger('user_company_id')->nullable();
+            $table->integer('role_id')->unsigned();
+            $table->integer('city_id')->unsigned();
             $table->tinyInteger('is_active');
             $table->rememberToken();
             $table->timestamps();

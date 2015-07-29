@@ -13,11 +13,12 @@ class CreateUserAbilityTestQuestion extends Migration
     public function up()
     {
         Schema::create('ability_test_questions', function (Blueprint $table) {
-            $table->bigIncrements('id');
+            $table->increments('id');
             $table->string('description',255);
             $table->tinyInteger('is_active');
-            $table->integer('question_type_id');
-            $table->integer('question_category_id');
+            $table->integer('language_id')->unsigned();
+            $table->integer('question_type_id')->unsigned();
+            $table->integer('question_category_id')->unsigned();
             $table->timestamps();
         });
     }

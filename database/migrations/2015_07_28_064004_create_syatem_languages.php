@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateUserRemindersByCompany extends Migration
+class CreateSyatemLanguages extends Migration
 {
     /**
      * Run the migrations.
@@ -12,12 +12,11 @@ class CreateUserRemindersByCompany extends Migration
      */
     public function up()
     {
-        Schema::create('reminders', function (Blueprint $table) {
-            $table->bigIncrements('id');
-            $table->text('message');
-            $table->timestamp('reminder_time');
+        Schema::create('system_languages', function (Blueprint $table) {
+            $table->increments('id');
+            $table->string('name',255);
+            $table->string('slug',255);
             $table->tinyInteger('is_active');
-            $table->bigInteger('reminder_type_id')->unsigned();
             $table->timestamps();
         });
     }
@@ -29,6 +28,6 @@ class CreateUserRemindersByCompany extends Migration
      */
     public function down()
     {
-        Schema::drop('reminders');
+        Schema::drop('system_languages');
     }
 }

@@ -13,7 +13,7 @@ class CreateReminderTypes extends Migration
     public function up()
     {
         Schema::create('reminder_types', function (Blueprint $table) {
-            $table->increments('id');
+            $table->bigIncrements('id');
             $table->string('name',255);
             $table->tinyInteger('is_active');
             $table->timestamps();

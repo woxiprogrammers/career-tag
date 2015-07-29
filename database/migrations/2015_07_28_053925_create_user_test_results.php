@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateFavouriteUsers extends Migration
+class CreateUserTestResults extends Migration
 {
     /**
      * Run the migrations.
@@ -12,10 +12,11 @@ class CreateFavouriteUsers extends Migration
      */
     public function up()
     {
-        Schema::create('favourite_users', function (Blueprint $table) {
+        Schema::create('user_test_results', function (Blueprint $table) {
             $table->increments('id');
-            $table->bigInteger('user_id');
-            $table->bigInteger('company_id');
+            $table->integer('ability_test_question_id')->unsigned();
+            $table->integer('question_option_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
             $table->timestamps();
         });
     }
@@ -27,6 +28,6 @@ class CreateFavouriteUsers extends Migration
      */
     public function down()
     {
-        Schema::drop('favourite_users');
+        Schema::drop('user_test_results');
     }
 }

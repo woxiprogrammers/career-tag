@@ -14,8 +14,8 @@ class CreateUserActivity extends Migration
     {
         Schema::create('user_activities', function (Blueprint $table) {
             $table->increments('id');
-            $table->bigInteger('user_id');
-            $table->integer('activity_id');
+            $table->bigInteger('user_id')->unsigned();
+            $table->integer('activity_id')->unsigned();
             $table->tinyInteger('is_active');
             $table->timestamps();
         });

@@ -16,8 +16,8 @@ class CreateUserJobSearch extends Migration
             $table->increments('id');
             $table->string('position', 255);
             $table->date('begin_date');
-            $table->bigInteger('user_id');
-            $table->bigInteger('city_id');
+            $table->bigInteger('user_id')->unsigned();
+            $table->integer('city_id')->unsigned();
             $table->timestamps();
         });
     }

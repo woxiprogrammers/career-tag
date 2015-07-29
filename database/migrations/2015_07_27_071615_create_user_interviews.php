@@ -16,9 +16,9 @@ class CreateUserInterviews extends Migration
             $table->increments('id');
             $table->string('additional_info',255);
             $table->tinyInteger('is_active');
-            $table->bigInteger('user_id');
-            $table->bigInteger('company_id');
-            $table->bigInteger('reminder_id');
+            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('company_id')->unsigned();
+            $table->bigInteger('reminder_id')->unsigned();
             $table->date('schedule_date');
             $table->time('schedule_time');
             $table->timestamps();

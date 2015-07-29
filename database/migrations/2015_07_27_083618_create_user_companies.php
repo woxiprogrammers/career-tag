@@ -14,8 +14,8 @@ class CreateUserCompanies extends Migration
     {
         Schema::create('user_companies', function (Blueprint $table) {
             $table->increments('id');
-            $table->bigInteger('user_id');
-            $table->bigInteger('company_id');
+            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('company_id')->unsigned();
             $table->tinyInteger('is_active');
             $table->timestamps();
         });

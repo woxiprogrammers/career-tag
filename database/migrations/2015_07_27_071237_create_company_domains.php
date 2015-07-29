@@ -17,7 +17,7 @@ class CreateCompanyDomains extends Migration
             $table->string('name',255);
             $table->string('slug',255);
             $table->tinyInteger('is_active');
-            $table->bigInteger('user_id');
+            $table->bigInteger('user_id')->unsigned();
             $table->timestamps();
         });
     }

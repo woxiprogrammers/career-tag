@@ -15,8 +15,8 @@ class CreateUserTestAnalysis extends Migration
         Schema::create('test_analysis', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('points');
-            $table->bigInteger('user_id');
-            $table->bigInteger('question_category_id');
+            $table->bigInteger('user_id')->unsigned();
+            $table->integer('question_category_id')->unsigned();
             $table->timestamps();
         });
     }

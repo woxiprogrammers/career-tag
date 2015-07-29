@@ -17,7 +17,8 @@ class CreateUserAbilityTestQuestionOptions extends Migration
             $table->string('description',255);
             $table->float('points');
             $table->tinyInteger('is_active');
-            $table->integer('ability_test_question_id');
+            $table->integer('ability_test_question_id')->unsigned();
+            $table->integer('language_id')->unsigned();
             $table->timestamps();
         });
     }

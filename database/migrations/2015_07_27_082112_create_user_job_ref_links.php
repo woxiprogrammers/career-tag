@@ -15,7 +15,7 @@ class CreateUserJobRefLinks extends Migration
         Schema::create('job_reference_links', function (Blueprint $table) {
             $table->increments('id');
             $table->string('link',255);
-            $table->bigInteger('user_id');
+            $table->bigInteger('user_id')->unsigned();
             $table->tinyInteger('is_active');
             $table->timestamps();
         });

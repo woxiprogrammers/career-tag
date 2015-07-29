@@ -16,7 +16,7 @@ class CreateUserProjects extends Migration
             $table->increments('id');
             $table->integer('experience');
             $table->tinyInteger('is_active');
-            $table->bigInteger('user_id');
+            $table->bigInteger('user_id')->unsigned();
             $table->timestamps();
         });
     }

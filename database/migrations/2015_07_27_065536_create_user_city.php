@@ -16,7 +16,7 @@ class CreateUserCity extends Migration
             $table->increments('id');
             $table->string('name',255);
             $table->string('slug',255);
-            $table->integer('country_id');
+            $table->integer('country_id')->unsigned();
             $table->timestamps();
         });
     }

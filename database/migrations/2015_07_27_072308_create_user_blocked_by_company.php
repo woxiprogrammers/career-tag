@@ -12,11 +12,12 @@ class CreateUserBlockedByCompany extends Migration
      */
     public function up()
     {
-        Schema::create('blocked_users', function (Blueprint $table) {
+        Schema::create('fav_blocked_users', function (Blueprint $table) {
             $table->increments('id');
-            $table->bigInteger('user_id');
-            $table->bigInteger('company_id');
-            $table->tinyInteger('status');
+            $table->bigInteger('user_id')->unsigned();
+            $table->bigInteger('company_id')->unsigned();
+            $table->tinyInteger('is_blocked')->default(0);
+            $table->tinyInteger('is_favourite')->default(0);
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateUserBlockedByCompany extends Migration
      */
     public function down()
     {
-        Schema::drop('blocked_users');
+        Schema::drop('fav_blocked_users');
     }
 }

@@ -15,9 +15,9 @@ class CreateUserJobRequests extends Migration
         Schema::create('job_requests', function (Blueprint $table) {
             $table->increments('id');
             $table->tinyInteger('status');
-            $table->bigInteger('user_id');
-            $table->bigInteger('reference_id');
-            $table->bigInteger('company_id');
+            $table->bigInteger('user_id')->unsigned();
+            $table->string('email',255);
+            $table->bigInteger('company_id')->unsigned();
             $table->timestamps('applied_on');
         });
     }

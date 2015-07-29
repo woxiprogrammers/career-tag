@@ -15,8 +15,8 @@ class CreateUserLanguageProficiency extends Migration
         Schema::create('language_proficiency', function (Blueprint $table) {
             $table->increments('id');
             $table->tinyInteger('ratings');
-            $table->integer('speaking_language_id');
-            $table->bigInteger('user_id');
+            $table->integer('speaking_language_id')->unsigned();
+            $table->bigInteger('user_id')->unsigned();
             $table->timestamps();
         });
     }

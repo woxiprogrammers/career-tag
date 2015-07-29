@@ -16,7 +16,7 @@ class CreateUserDocuments extends Migration
             $table->increments('id');
             $table->string('name', 255);
             $table->tinyInteger('is_active');
-            $table->bigInteger('user_id');
+            $table->bigInteger('user_id')->unsigned();
             $table->timestamps();
         });
     }

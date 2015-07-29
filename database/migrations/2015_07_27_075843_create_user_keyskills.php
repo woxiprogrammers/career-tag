@@ -14,8 +14,8 @@ class CreateUserKeyskills extends Migration
     {
         Schema::create('user_keyskills', function (Blueprint $table) {
             $table->increments('id');
-            $table->bigInteger('user_id');
-            $table->bigInteger('keyskills_id');
+            $table->bigInteger('user_id')->unsigned();
+            $table->integer('keyskill_id')->unsigned();
             $table->tinyInteger('is_active');
             $table->timestamps();
         });
