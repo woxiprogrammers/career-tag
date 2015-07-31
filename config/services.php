@@ -35,4 +35,10 @@ return [
         'secret' => '',
     ],
 
+    'github' => [
+        'client_id' => env('GIT_CLIENT_ID'),
+        'client_secret' => env('GIT_SECRET'),
+        'redirect' => env('GIT_REDIRECT'),
+    ],
+
 ];

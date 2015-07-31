@@ -146,6 +146,8 @@ return [
 
         /* https://github.com/barryvdh/laravel-debugbar */
         Barryvdh\Debugbar\ServiceProvider::class,
+        /* Laraavel Socialite */
+        Laravel\Socialite\SocialiteServiceProvider::class,
 
     ],
 
@@ -196,6 +198,8 @@ return [
         'View'      => Illuminate\Support\Facades\View::class,
         /* https://github.com/barryvdh/laravel-debugbar */
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
+        /* Laravel Socialite */
+        'Socialize' => 'Laravel\Socialite\Facades\Socialite',
 
     ],
 
