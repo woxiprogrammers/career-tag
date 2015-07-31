@@ -3,6 +3,8 @@
 namespace App\Http\Controllers\Auth;
 
 use App\User;
+use Illuminate\Support\Facades\Auth;
+use Illuminate\Http\Request;
 use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
@@ -28,9 +30,12 @@ class AuthController extends Controller
      *
      * @return void
      */
+    protected $redirectPath = '/home';
+    protected $loginPath = '/login';
     public function __construct()
     {
-        $this->middleware('guest', ['except' => 'getLogout']);
+        //$this->middleware('guest', ['except' => 'getLogout']);
+        $this->middleware('auth',['except' => 'checkLogin']);
     }
 
     /**
@@ -61,5 +66,19 @@ class AuthController extends Controller
             'email' => $data['email'],
             'password' => bcrypt($data['password']),
         ]);
+    }
+
+    protected function checkLogin(Request $request){
+        if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
+            // Authentication passed...
+            return redirect('home');
+        }else{
+            return redirect('login');
+        }
+    }
+
+    public function logout(){
+        Auth::logout();
+        return redirect('/');
     }
 }

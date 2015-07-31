@@ -36,6 +36,7 @@
         </style>
     </head>
     <body>
+    <span><a href="{{URL::to('/logout')}}">Logout</a></span>
         <div class="container">
             <div class="content">
                 <div class="title">Laravel 5</div>

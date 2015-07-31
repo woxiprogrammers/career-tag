@@ -11,6 +11,17 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', ['middleware'=>'guest', function () {
+    return view('login');
+}]);
+Route::get('login',['middleware'=>'guest', function () {
+    return view('login');
+}]);
+Route::get('home', ['middleware'=>'auth', function () {
     return view('welcome');
-});
+}]);
+Route::post('login', 'Auth\AuthController@checkLogin');
+
+//Route::get('auth/login', 'Auth\AuthController@getLogin');
+
+Route::get('logout', 'Auth\AuthController@getLogout');
