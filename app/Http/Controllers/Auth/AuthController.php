@@ -71,14 +71,18 @@ class AuthController extends Controller
     protected function checkLogin(Request $request){
         if (Auth::attempt(['email' => $request->email, 'password' => $request->password])) {
             // Authentication passed...
-            return redirect('home');
+            return redirect()->intended('home');
         }else{
-            return redirect('login');
+            return redirect()->intended('login');
         }
     }
 
     public function logout(){
         Auth::logout();
         return redirect('/');
+    }
+
+    public function home(){
+        return view('welcome');
     }
 }

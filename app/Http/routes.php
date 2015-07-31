@@ -11,15 +11,18 @@
 |
 */
 
-Route::get('/', ['middleware'=>'guest', function () {
+Route::get('/', ['middleware'=>'guest','after'=>'no-cache', function () {
     return view('login');
 }]);
-Route::get('login',['middleware'=>'guest', function () {
+Route::get('login',['middleware'=>'guest','after'=>'no-cache', function () {
     return view('login');
 }]);
-Route::get('home', ['middleware'=>'auth', function () {
-    return view('welcome');
-}]);
+Route::filter('no-cache',function($route, $request, $response){
+    $response->headers->set('Cache-Control','nocache, no-store, max-age=0, must-revalidate');
+    $response->headers->set('Pragma','no-cache');
+    $response->headers->set('Expires','Fri, 01 Jan 1990 00:00:00 GMT');
+});
+Route::get('home', 'Auth\AuthController@home');
 Route::post('login', 'Auth\AuthController@checkLogin');
 
 //Route::get('auth/login', 'Auth\AuthController@getLogin');

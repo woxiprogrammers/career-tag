@@ -36,10 +36,10 @@
         </style>
     </head>
     <body>
-    <span><a href="{{URL::to('/logout')}}">Logout</a></span>
+    <span><a style="color:green;font-weight:300" href="{{URL::to('/logout')}}">Logout</a></span>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title">CareerTag Welcomes You!</div>
             </div>
         </div>
     </body>
