@@ -79,8 +79,19 @@ class AuthController extends Controller
      */
     public function handleProviderCallback()
     {
-        $user = Socialite::driver('github')->user();
+        //$user = Socialite::driver('github')->user();
 
-        // $user->token;
+        try {
+            $user = Socialite::driver('github')->user();
+            dd($user);
+        } catch (Exception $e) {
+            return Redirect::to('auth/github');
+        }
+
+        /*$authUser = $this->findOrCreateUser($user);
+
+        Auth::login($authUser, true);
+
+        return Redirect::to('home');*/
     }
 }

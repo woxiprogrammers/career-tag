@@ -39,6 +39,8 @@
         <div class="container">
             <div class="content">
                 <div class="title">Laravel 5</div>
+                {{ $url = asset('img/photo.jpg'); }}
+                {{ $url }}
             </div>
         </div>
     </body>
