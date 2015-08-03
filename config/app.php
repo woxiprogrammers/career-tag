@@ -199,7 +199,7 @@ return [
         /* https://github.com/barryvdh/laravel-debugbar */
         'Debugbar' => Barryvdh\Debugbar\Facade::class,
         /* Laravel Socialite */
-        'Socialize' => 'Laravel\Socialite\Facades\Socialite',
+        'Socialite' => Laravel\Socialite\Facades\Socialite::class,
 
     ],
 
