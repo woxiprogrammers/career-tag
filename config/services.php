@@ -41,4 +41,9 @@ return [
         'redirect' => env('GIT_REDIRECT'),
     ],
 
+    'linkedin' => [
+        'client_id' => env('LINKEDIN_CLIENT_ID'),
+        'client_secret' => env('LINKEDIN_SECRET'),
+        'redirect' => env('LINKEDIN_REDIRECT'),
+    ],
 ];

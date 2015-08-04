@@ -7,6 +7,7 @@ use Validator;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\ThrottlesLogins;
 use Illuminate\Foundation\Auth\AuthenticatesAndRegistersUsers;
+use Laravel\Socialite\Facades\Socialite;
 
 class AuthController extends Controller
 {
@@ -30,7 +31,7 @@ class AuthController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest', ['except' => 'getLogout']);
+        //$this->middleware('guest', ['except' => 'getLogout']);
     }
 
     /**
@@ -86,6 +87,39 @@ class AuthController extends Controller
             dd($user);
         } catch (Exception $e) {
             return Redirect::to('auth/github');
+        }
+
+        /*$authUser = $this->findOrCreateUser($user);
+
+        Auth::login($authUser, true);
+
+        return Redirect::to('home');*/
+    }
+
+    /**
+     * Redirect the user to the GitHub authentication page.
+     *
+     * @return Response
+     */
+    public function redirectToLinkedIn()
+    {
+        return Socialite::driver('linkedin')->redirect();
+    }
+
+    /**
+     * Obtain the user information from GitHub.
+     *
+     * @return Response
+     */
+    public function handleProviderCallbackLinkedIn()
+    {
+        //$user = Socialite::driver('github')->user();
+
+        try {
+            $user = Socialite::driver('linkedin')->user();
+            dd($user);
+        } catch (Exception $e) {
+            return Redirect::to('auth/linkedin');
         }
 
         /*$authUser = $this->findOrCreateUser($user);

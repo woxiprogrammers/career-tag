@@ -39,8 +39,8 @@
         <div class="container">
             <div class="content">
                 <div class="title">Laravel 5</div>
-                {{ $url = asset('img/photo.jpg'); }}
-                {{ $url }}
+                <a href="{{URL::to('auth/github')}}"><img src="{{asset('assets/login-with-Github-button.png')}}" /></a>
+                <a href="{{URL::to('auth/linkedin')}}"><img src="{{asset('assets/register_login_linkedin_reply.png')}}" /></a>
             </div>
         </div>
     </body>
