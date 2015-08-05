@@ -41,7 +41,7 @@
                 <div class="title">Laravel 5</div>
                 <?php //<a href="{{URL::to('auth/github')}}"><img src="{{asset('assets/login-with-Github-button.png')}}" /></a> ?>
                 <a href="{{URL::to('auth/linkedin')}}"><img src="{{asset('assets/register_login_linkedin_reply.png')}}" /></a>
-                <?php//<a href="{{URL::to('auth/xing')}}"><img src="{{asset('assets/xing_login.png')}}" /></a>?>
+                <?php // <a href="{{URL::to('auth/xing')}}"><img src="{{asset('assets/xing_login.png')}}" /></a> ?>
             </div>
         </div>
     </body>
