@@ -68,17 +68,17 @@ class AuthController extends Controller
      *
      * @return Response
      */
-    public function redirectToProvider()
+    /*public function redirectToProvider()
     {
         return Socialite::driver('github')->redirect();
-    }
+    }*/
 
     /**
      * Obtain the user information from GitHub.
      *
      * @return Response
      */
-    public function handleProviderCallback()
+    /*public function handleProviderCallback()
     {
         //$user = Socialite::driver('github')->user();
 
@@ -94,7 +94,7 @@ class AuthController extends Controller
         Auth::login($authUser, true);
 
         return Redirect::to('home');*/
-    }
+    //}
 
     /**
      * Redirect the user to the GitHub authentication page.

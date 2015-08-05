@@ -15,8 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 //Route::get('auth/github','Auth\AuthController@index');
-Route::get('auth/github', 'Auth\AuthController@redirectToProvider');
-Route::get('auth/github/callback', 'Auth\AuthController@handleProviderCallback');
+//Route::get('auth/github', 'Auth\AuthController@redirectToProvider');
+//Route::get('auth/github/callback', 'Auth\AuthController@handleProviderCallback');
 
 Route::get('auth/linkedin', 'Auth\AuthController@redirectToLinkedIn');
 Route::get('auth/linkedin/callback', 'Auth\AuthController@handleProviderCallbackLinkedIn');
