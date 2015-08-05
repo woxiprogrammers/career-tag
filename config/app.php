@@ -147,7 +147,8 @@ return [
         /* https://github.com/barryvdh/laravel-debugbar */
         Barryvdh\Debugbar\ServiceProvider::class,
         /* Laraavel Socialite */
-        Laravel\Socialite\SocialiteServiceProvider::class,
+        //Laravel\Socialite\SocialiteServiceProvider::class,
+        'SocialiteProviders\Manager\ServiceProvider', // add
 
     ],
 

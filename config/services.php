@@ -46,4 +46,9 @@ return [
         'client_secret' => env('LINKEDIN_SECRET'),
         'redirect' => env('LINKEDIN_REDIRECT'),
     ],
+    'xing' => [
+        'client_id' => env('XING_CLIENT_ID'),
+        'client_secret' => env('XING_SECRET'),
+        'redirect' => env('XING_REDIRECT'),
+    ],
 ];

@@ -20,3 +20,6 @@ Route::get('auth/github/callback', 'Auth\AuthController@handleProviderCallback')
 
 Route::get('auth/linkedin', 'Auth\AuthController@redirectToLinkedIn');
 Route::get('auth/linkedin/callback', 'Auth\AuthController@handleProviderCallbackLinkedIn');
+
+Route::get('auth/xing', 'Auth\AuthController@redirectToXing');
+Route::get('auth/xing/callback', 'Auth\AuthController@handleProviderCallbackXing');

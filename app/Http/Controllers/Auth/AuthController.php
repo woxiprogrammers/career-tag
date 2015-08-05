@@ -128,4 +128,37 @@ class AuthController extends Controller
 
         return Redirect::to('home');*/
     }
+
+    /**
+     * Redirect the user to the GitHub authentication page.
+     *
+     * @return Response
+     */
+    public function redirectToXing()
+    {
+        return Socialite::with('xing')->redirect();
+    }
+
+    /**
+     * Obtain the user information from GitHub.
+     *
+     * @return Response
+     */
+    public function handleProviderCallbackXing()
+    {
+        //$user = Socialite::driver('github')->user();
+
+        try {
+            $user = Socialite::with('xing')->user();
+            dd($user);
+        } catch (Exception $e) {
+            return Redirect::to('auth/linkedin');
+        }
+
+        /*$authUser = $this->findOrCreateUser($user);
+
+        Auth::login($authUser, true);
+
+        return Redirect::to('home');*/
+    }
 }
