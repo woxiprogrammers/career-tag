@@ -1,5 +1,5 @@
 # career-tag
-1. Installation guidelines.
+### Installation guidelines
 ```
 > To clone repository use **git clone git@github.com:woxiprogrammers/career-tag.git**
 > There are two main branches
