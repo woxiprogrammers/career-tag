@@ -18,10 +18,12 @@
  - Install composer
  ```
     1. curl -sS https://getcomposer.org/installer | php
-    
+
     2. sudo mv composer.phar /usr/local/bin/composer
  ```
  - Then goto root path of project directory and run following command
  ```
+
     * composer install
+    
  ```
