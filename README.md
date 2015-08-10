@@ -3,4 +3,5 @@
 > There are two main branches
 > * master
 > * develop
+```
 > always pull code from develop for local development.
