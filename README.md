@@ -11,6 +11,6 @@
     * develop
   ```
  - always pull code from develop for local development.
- - create .env file in root directory & copy all content from .env.example to .env file
-
-   & make changes according to requirement like database & other required passwords.
+ - create .env file in root directory and copy all content from .env.example to .env file and
+   make changes according to requirement like database and other required passwords according
+   to your local environment.
