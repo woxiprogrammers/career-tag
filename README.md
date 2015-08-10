@@ -7,7 +7,9 @@
  - There are two main branches
  ```
     > master
+
     > develop
+
   ```
  - always pull code from develop for local development.
  - create .env file in root directory & copy all content from .env.example to .env file & make changes according to requirement like database & other required passwords.
