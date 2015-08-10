@@ -29,7 +29,6 @@
  ```
  - Give recursive permission [777 -R] to following folders
  ```
-    * bootstrap/cache
-
+    * bootstrap/cache <br/>
     * storage
  ```
