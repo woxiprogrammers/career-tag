@@ -8,6 +8,7 @@
  - There are two main branches
  ```
     1. master
+
     2. develop
  ```
  - always pull code from develop for local development.
@@ -17,6 +18,7 @@
  - Install composer
  ```
     1. curl -sS https://getcomposer.org/installer | php
+    
     2. sudo mv composer.phar /usr/local/bin/composer
  ```
  - Then goto root path of project directory and run following command
