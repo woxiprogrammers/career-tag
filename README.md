@@ -15,7 +15,7 @@
  - create .env file in root directory and copy all content from .env.example to .env file and
    make changes according to requirement like database and other required passwords according
    to your local environment.
- - Install composer
+ - Install composer [It's dependency manager for php]
  ```
     1. curl -sS https://getcomposer.org/installer | php
 
@@ -25,5 +25,5 @@
  ```
 
     * composer install
-    
+
  ```
