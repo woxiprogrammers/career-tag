@@ -1,5 +1,6 @@
 # career-tag
-![Image of CareerTag](public/assets/logos/careerscore_logo_lang.png|width=100px)
+
+<img src="public/assets/logos/careerscore_logo_lang.png" alt="Image of CareerTag" height="100" width="100"/>
 ### Installation guidelines
 
 > To clone repository use **git clone git@github.com:woxiprogrammers/career-tag.git**
