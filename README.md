@@ -1,4 +1,4 @@
-# career-tag Developed using
+# career-tag ### Developed using
 <img src="public/assets/logos/careerscore_logo_lang.png" alt="Image of CareerTag" height="150" width="300"/>
 <img src="public/assets/logos/L5.png" alt="Image of CareerTag" height="150" width="300"/>
 
