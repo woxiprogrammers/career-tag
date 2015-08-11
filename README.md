@@ -34,3 +34,7 @@
 
     * storage
  ```
+ - Run following command to generate DB
+ ```
+    * php artisan migrate --seed
+ ```
