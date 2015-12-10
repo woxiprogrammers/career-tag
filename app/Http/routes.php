@@ -15,3 +15,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 Route::get('job-seeker/registration',array('uses' => 'JobSeekerController@registration'));
+Route::get('php-excel',array('uses' => 'JobSeekerController@phpExcel'));
+Route::get('spout',array('uses' => 'JobSeekerController@spout'));
